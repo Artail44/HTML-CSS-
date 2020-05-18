@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>툴바(응용)</title>
+
+    <style>
+        p {
+            background-color: red;
+            color: yellow;
+        }
+
+        span button {
+            color: yellow;
+        }
+
+        p::first-letter {
+            font-size: 2em;
+        }
+
+        p::first-line {
+            color: blue;
+        }
+
+        div h1 {
+            color: red;
+            background-color: blue;
+            width: 225px;
+        }
+
+        h1:hover {
+            color: white;
+            background-color: yellow;
+        }
+
+        p:hover {
+            color: black;
+            background-color: violet;
+        }
+
+        p::selection {
+            background-color: black;
+            color: red;
+        }
+
+        input:enabled {
+            color: red;
+        }
+
+        input:disabled {
+            color: royalblue;
+        }
+
+        input:focus {
+            background-color: green
+        }
+
+        /* 선택자를 여러개 주는 방법. 붙여서 쓰면 됨(AND) 그리고 콤마(,)를 이용한 방법*/
+        /*https://ofcourse.kr/css-course/%EB%8B%A4%EC%A4%91-%EC%A1%B0%EA%B1%B4-%EC%84%A0%ED%83%9D%EC%9E%90*/
+        /*http://blog.naver.com/PostView.nhn?blogId=shinekjm&logNo=221618781015&parentCategoryNo=&categoryNo=12&viewDate=&isShowPopularPosts=true&from=search*/
+        /* input[type=checkbox]:checked+div.hiding  */
+        /* input[type=checkbox]:checked+.hiding  */
+        input[type=checkbox]:checked+div
+        {
+            height: 0px;
+        }
+
+        div.hiding {
+            overflow: hidden;
+            width: 1650px;
+            height: 500px;
+            -ms-transition-duration: 1s;
+            -webkit-transition-duration: 1s;
+            -moz-transition-duration: 1s;
+            transition-duration: 1s;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+
+
+
+</head>
+
+<body>
+    <div class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bootstrap</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-content"></div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Loremiqsum</h1>
+        <p>Elit elit occaecat reprehenderit in. In voluptate nostrud ad commodo consectetur aliquip. Mollit ad nisi
+            dolor ut ipsum veniam consectetur tempor qui consequat ullamco. Id consectetur eiusmod exercitation magna
+            est quis.
+
+            Non ea consequat dolor reprehenderit velit adipisicing. Elit dolor incididunt ex adipisicing minim cupidatat
+            veniam reprehenderit. Dolore dolore officia minim adipisicing adipisicing qui est eiusmod est ut elit.
+
+            Minim et ea eiusmod magna. Sint id magna in in ipsum adipisicing proident sint dolore qui culpa enim sit
+            nisi. Exercitation laborum voluptate labore est consequat anim est do officia dolor et commodo labore
+            mollit. Aliquip occaecat labore ea velit eu quis culpa ad nulla deserunt fugiat enim voluptate. Labore
+            voluptate velit non laboris cupidatat magna commodo do.</p>
+
+
+        <input type="checkbox"/>
+        <div class="hiding">
+            <p>Adipisicing id est mollit sunt laborum deserunt ea cillum excepteur. Deserunt amet culpa dolore laboris
+                nostrud id incididunt quis. Eu magna ipsum do do qui incididunt. Incididunt velit reprehenderit fugiat
+                sit
+                ad ullamco do aliquip sint dolore reprehenderit. Non consectetur voluptate magna eiusmod do ad velit
+                aute
+                fugiat aliqua qui. Mollit nisi qui eiusmod velit aliqua duis qui cillum magna nostrud. Id Lorem duis in
+                consequat velit commodo eu incididunt non voluptate commodo exercitation ipsum voluptate.
+
+                Eu deserunt ullamco ex pariatur elit ut magna voluptate sint officia id. Amet sunt nulla adipisicing
+                nostrud
+                nulla et minim qui. Ullamco adipisicing dolor culpa veniam enim veniam ut dolore dolore ex culpa qui
+                nostrud. Elit veniam occaecat excepteur dolore. Velit reprehenderit labore Lorem exercitation
+                reprehenderit
+                proident duis esse veniam officia.
+
+                Sunt culpa ea irure adipisicing culpa commodo. Aliqua occaecat dolore quis culpa ut. Ullamco ad tempor
+                ipsum
+                nostrud adipisicing eiusmod. Nisi esse deserunt qui sint veniam nisi labore magna nostrud enim. Nisi ex
+                nulla cillum voluptate id velit aliqua non. Magna nostrud sint id anim eu mollit sint exercitation
+                laboris
+                proident commodo ea dolor. Occaecat nisi proident occaecat ad aliquip id cillum excepteur nulla commodo.
+            </p>
+            <p>Aliqua ipsum reprehenderit ex excepteur ex dolore irure. Nulla pariatur excepteur minim occaecat non
+                officia
+                irure exercitation minim do dolor quis. Ut aliqua incididunt reprehenderit aliqua magna officia culpa
+                incididunt quis duis laboris cillum. Aliqua eu ut fugiat anim officia occaecat aliqua eiusmod quis
+                dolore.
+
+                Sunt et nulla fugiat veniam laboris enim excepteur. Commodo nulla nostrud anim do non ullamco eu.
+                Occaecat
+                consequat cillum esse minim eiusmod ipsum qui enim officia Lorem consequat ullamco exercitation dolor.
+                Quis
+                fugiat aute laborum nulla aliquip dolore Lorem laborum voluptate commodo. Proident consectetur excepteur
+                nisi id minim ipsum. Lorem proident incididunt velit esse. Labore laboris dolore minim reprehenderit
+                proident fugiat aliquip elit labore amet enim ullamco aliqua.
+
+                Minim proident eu et mollit eu. Aute Lorem cupidatat id do sint. Tempor esse duis commodo elit velit
+                labore
+                officia consequat reprehenderit esse. Duis do magna amet magna proident et aute aliquip magna laborum
+                velit
+                occaecat veniam. Ut dolore irure dolore eu dolor quis sunt minim elit minim duis. Enim amet voluptate
+                nostrud culpa fugiat amet esse commodo.</p>
+            <p>Pariatur id quis magna cupidatat minim est proident amet nulla deserunt cillum occaecat. Eu excepteur
+                commodo
+                amet officia. Duis eiusmod non deserunt ullamco laborum exercitation. Minim ullamco sit eiusmod
+                reprehenderit. Ad amet est tempor veniam do labore incididunt eu exercitation in tempor aliqua enim.
+
+                Occaecat ut enim occaecat ullamco irure dolor. Ipsum irure reprehenderit amet culpa consequat voluptate
+                consequat eu est pariatur deserunt excepteur minim. Ea laborum esse proident elit adipisicing aliquip ut
+                consequat dolore qui consequat dolor et deserunt. Voluptate do consequat labore est cupidatat elit in
+                non
+                elit culpa anim sunt sint aliqua. Do ut deserunt culpa dolore ex voluptate proident duis. Irure
+                incididunt
+                magna anim adipisicing ipsum officia dolore consectetur aute mollit laboris cillum sit qui. Eiusmod
+                magna id
+                ad adipisicing pariatur dolore elit ea aliquip consectetur voluptate sunt consequat culpa.
+
+                Voluptate Lorem laborum exercitation duis. Qui ad minim laboris sit deserunt. Incididunt laboris amet
+                Lorem
+                officia. Eiusmod nisi et non labore incididunt aute culpa commodo fugiat. Et et esse laboris
+                adipisicing.
+                Qui reprehenderit cillum proident dolore qui. Officia est ex Lorem duis esse labore ipsum laborum qui.
+            </p>
+            <p>Adipisicing do anim veniam exercitation qui non incididunt quis eiusmod eiusmod reprehenderit. Excepteur
+                laborum aliquip minim sunt elit deserunt veniam adipisicing velit cillum voluptate. Aliquip veniam
+                ullamco
+                tempor in consequat nulla. Occaecat magna Lorem nostrud adipisicing ad fugiat esse pariatur est nisi
+                sint
+                est eiusmod. Elit ipsum consequat labore culpa do. Excepteur et aliqua sit veniam ullamco. Est magna
+                ipsum
+                voluptate dolore consequat consectetur ea Lorem.
+
+                Labore adipisicing reprehenderit veniam Lorem quis eiusmod exercitation nulla. Est culpa commodo
+                pariatur
+                fugiat amet ex ad enim mollit magna sit id nulla. Enim voluptate amet nisi anim veniam quis ex
+                reprehenderit
+                non.
+
+                Aliquip pariatur tempor reprehenderit minim nostrud magna occaecat laboris. Lorem consequat cupidatat
+                nulla
+                ad elit deserunt ad quis. Ullamco elit nulla qui dolor ex id ut proident irure amet pariatur sunt. Lorem
+                mollit dolore reprehenderit eiusmod. Ipsum deserunt sunt nulla quis qui fugiat aute. Minim dolor minim
+                ipsum
+                labore fugiat nostrud.</p>
+
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>
